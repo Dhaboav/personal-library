@@ -8,10 +8,8 @@
 
   <p align="center">
     This repository functions to manage books in a personal library and operates locally using localhost.
-    <br />
-    <a href="https://github.com/Dhaboav/web-login"><strong>Explore the docs »</strong></a>    
-    
-  Home Sample:
+    <br /> 
+  
   ![Sample Dashboard](https://github.com/Dhaboav/personal-library/blob/master/home.png)
   
   </p>
