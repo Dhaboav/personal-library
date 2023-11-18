@@ -1,3 +1,14 @@
+<?php
+$link = mysqli_connect('localhost', 'root', '12345678', 'perpustakaan');
+    if (isset($_POST['simpan'])) {
+        $id = $_POST['id-buku'];
+        $judul = $_POST['judul'];
+        $penulis = $_POST['penulis'];
+        mysqli_query($link, "INSERT INTO `buku` (`id`, `judul`, `penulis`) VALUES ('$id', '$judul', '$penulis')");
+        echo "<meta http-equiv='refresh' content='0; url=index.php'>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,17 +32,18 @@
             <div class="table">
                 <table>
                     <tr>
+                        <th>ID</th>
                         <th>Judul</th>
                         <th>Penulis</th>
                     </tr>
                     <?php
-                    $link = mysqli_connect('localhost', 'root', '12345678', 'perpustakaan');
                     $sql = "SELECT * FROM buku";
                     $result = mysqli_query($link, $sql);
                     if ($result) {
                         while ($data = mysqli_fetch_assoc($result)) {
                             echo "
                         <tr>
+                            <td>{$data['id']}</td>
                             <td>{$data['judul']}</td>
                             <td>{$data['penulis']}</td>
                         </tr>
