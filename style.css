@@ -52,19 +52,20 @@ body {
     background-color: rgb(0, 200, 255);
 }
 .table table td {padding: 0 10px;}
-
 .tambah-buku {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     margin: auto 0;
     margin-right: 10px;
     width: 21%;
-    height: 25%;
+    height: 70%;
     background-color: rgb(0, 200, 255);
     font-weight: bold;
     border-radius: 30px;
     color: white;
+    padding: 20px 0;
 }
 .tambah-buku input[type="submit"] {
     padding: 5px;
