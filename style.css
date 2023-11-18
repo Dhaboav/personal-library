@@ -9,11 +9,12 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-image: linear-gradient(to top, black, darkblue)
 }
 .container {
     background: #b1b1b14c;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.739);
+    box-shadow: 0 0 30px rgb(255, 0, 0);
     border-radius: 20px;
     width: 90vw;
     height: 90vh;
