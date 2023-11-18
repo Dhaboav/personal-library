@@ -4,7 +4,6 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
 body {
     display: flex;
     height: 100vh;
@@ -12,7 +11,6 @@ body {
     align-items: center;
     background-color: black;
 }
-
 .container {
     background: #b1b1b14c;
     border: 2px solid white;
@@ -21,13 +19,11 @@ body {
     height: 90vh;
     overflow: hidden; 
 }
-
 .container h1 {
     color: white;
     text-align: center;
     background-color: rgb(0, 200, 255);
 }
-
 .table {
     margin-top: 25px;
     margin-left: 10px;
@@ -43,9 +39,10 @@ body {
     border-collapse: collapse;
     color: black;
 }
+.table table tr:nth-child(even) {background-color: #f2f2f2;}
+.table table tr:nth-child(odd) {background-color: white;}
 .table table th{
     color: white;
     background-color: rgb(0, 200, 255);
 }
-.table table tr:nth-child(even) {background-color: #f2f2f2;}
-.table table tr:nth-child(odd) {background-color: white;}
+.table table td {padding: 0 10px;}
