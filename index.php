@@ -17,30 +17,53 @@
 <body>
     <div class="container">
         <h1>Personal Library</h1>
-        <div class="table">
-            <table>
-                <tr>
-                    <th>Judul</th>
-                    <th>Penulis</th>
-                </tr>
-
-                <?php
-                $link = mysqli_connect('localhost', 'root', '12345678', 'perpustakaan');
-                $sql = "SELECT * FROM buku";
-                $result = mysqli_query($link, $sql);
-                if ($result) {
-                    while ($data = mysqli_fetch_assoc($result)) {
-                        echo "
+        <div class="content">
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Judul</th>
+                        <th>Penulis</th>
+                    </tr>
+                    <?php
+                    $link = mysqli_connect('localhost', 'root', '12345678', 'perpustakaan');
+                    $sql = "SELECT * FROM buku";
+                    $result = mysqli_query($link, $sql);
+                    if ($result) {
+                        while ($data = mysqli_fetch_assoc($result)) {
+                            echo "
                         <tr>
                             <td>{$data['judul']}</td>
                             <td>{$data['penulis']}</td>
                         </tr>
                         ";
+                        }
                     }
-                }
-                ?>
-            </table>
+                    ?>
+                </table>
+            </div>
+            <div class="tambah-buku">
+                <form action='index.php' method='POST'>
+                    <table>
+                        <tr>
+                            <td>ID</td>
+                            <td><input type='text' name='id-buku'></td>
+                        </tr>
+                        <tr>
+                            <td>Judul</td>
+                            <td><input type='text' name='judul'></td>
+                        </tr>
+                        <tr>
+                            <td>Penulis</td>
+                            <td><input type='text' name='penulis'></td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'><input type='submit' name='simpan' value='Simpan'></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         </div>
+
     </div>
 </body>
 
