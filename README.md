@@ -12,7 +12,7 @@
     <a href="https://github.com/Dhaboav/web-login"><strong>Explore the docs »</strong></a>    
     
   Home Sample:
-  ![Sample Dashboard](https://github.com/Dhaboav/perpustakaan/blob/home.png)
+  ![Sample Dashboard](https://github.com/Dhaboav/personal-library/blob/master/home.png)
   
   </p>
 </div>
